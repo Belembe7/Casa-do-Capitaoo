@@ -1,0 +1,89 @@
+/* Admin design tokens — identidade marinha de Inhambane */
+.admin-root {
+  --admin-bg: #f8fafc;
+  --admin-sidebar: #0f2942;
+  --admin-sidebar-text: #cbd5e1;
+  --admin-sidebar-active: #1b4b6b;
+  --admin-primary: #1b4b6b;
+  --admin-accent: #d4a96a;
+  --admin-surface: #ffffff;
+  --admin-border: #e2e8f0;
+  --admin-text: #1e293b;
+  --admin-text-muted: #64748b;
+  --status-pending: #f59e0b;
+  --status-confirmed: #3b82f6;
+  --status-active: #10b981;
+  --status-cancelled: #ef4444;
+  --status-draft: #94a3b8;
+}
+
+.admin-root {
+  background: var(--admin-bg);
+  color: var(--admin-text);
+  min-height: 100vh;
+}
+
+.admin-card {
+  background: var(--admin-surface);
+  border: 1px solid var(--admin-border);
+  border-radius: 0.5rem;
+}
+
+.admin-btn-primary {
+  @apply inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-white rounded-md transition-colors;
+  background: var(--admin-primary);
+}
+
+.admin-btn-primary:hover {
+  background: #153a56;
+}
+
+.admin-btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium rounded-md border transition-colors;
+  border-color: var(--admin-border);
+  color: var(--admin-text);
+  background: white;
+}
+
+.admin-btn-secondary:hover {
+  background: var(--admin-bg);
+}
+
+.admin-input {
+  @apply w-full px-3 py-2 text-sm rounded-md border focus:outline-none focus:ring-2;
+  border-color: var(--admin-border);
+}
+
+.admin-input:focus {
+  --tw-ring-color: var(--admin-primary);
+  border-color: var(--admin-primary);
+}
+
+.admin-label {
+  @apply block text-xs font-medium uppercase tracking-wider mb-1;
+  color: var(--admin-text-muted);
+}
+
+.admin-table th {
+  @apply text-left text-xs font-medium uppercase tracking-wider px-4 py-3;
+  color: var(--admin-text-muted);
+  background: var(--admin-bg);
+}
+
+.admin-table td {
+  @apply px-4 py-3 text-sm border-t;
+  border-color: var(--admin-border);
+}
+
+.admin-table tr:hover td {
+  background: #f8fafc;
+}
+
+@keyframes pulse-live {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.realtime-dot {
+  animation: pulse-live 2s ease-in-out infinite;
+}
