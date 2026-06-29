@@ -8,19 +8,23 @@ import AdminSidebar from './AdminSidebar';
 import Breadcrumb from './Breadcrumb';
 
 function AdminShellInner({ children }: { children: React.ReactNode }) {
-  const { loading } = useAdmin();
+  const { loading, user } = useAdmin();
   const router = useRouter();
   const pathname = usePathname();
 
   useEffect(() => {
-    if (!loading && pathname !== '/admin/login') {
-      const legacy = sessionStorage.getItem('admin-auth');
-      const hasSupabase = Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL);
-      if (!hasSupabase && !legacy) {
-        router.push('/admin/login');
-      }
+    if (loading || pathname === '/admin/login') return;
+
+    const hasSupabase = Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL);
+    if (hasSupabase) {
+      if (!user) router.push('/admin/login');
+      return;
     }
-  }, [loading, pathname, router]);
+
+    if (!sessionStorage.getItem('admin-auth')) {
+      router.push('/admin/login');
+    }
+  }, [loading, pathname, router, user]);
 
   if (loading) {
     return (

@@ -1,62 +1,13 @@
-import { createServerClient } from '@supabase/ssr';
 import { NextResponse, type NextRequest } from 'next/server';
 
-export async function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
-
-  if (!pathname.startsWith('/admin')) {
-    return NextResponse.next();
-  }
-
-  const isLoginPage = pathname === '/admin/login' || pathname === '/admin';
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-
-  if (!supabaseUrl || !supabaseKey) {
-    if (pathname === '/admin') {
-      return NextResponse.redirect(new URL('/admin/dashboard', request.url));
-    }
-    return NextResponse.next();
-  }
-
-  let response = NextResponse.next({ request });
-
-  const supabase = createServerClient(supabaseUrl, supabaseKey, {
-    cookies: {
-      getAll() {
-        return request.cookies.getAll();
-      },
-      setAll(cookiesToSet) {
-        cookiesToSet.forEach(({ name, value }) => request.cookies.set(name, value));
-        response = NextResponse.next({ request });
-        cookiesToSet.forEach(({ name, value, options }) =>
-          response.cookies.set(name, value, options)
-        );
-      },
-    },
-  });
-
-  const {
-    data: { session },
-  } = await supabase.auth.getSession();
-
-  if (pathname === '/admin') {
-    return NextResponse.redirect(
-      new URL(session ? '/admin/dashboard' : '/admin/login', request.url)
-    );
-  }
-
-  if (!isLoginPage && !session) {
-    return NextResponse.redirect(new URL('/admin/login', request.url));
-  }
-
-  if (isLoginPage && session && pathname === '/admin/login') {
+export function middleware(request: NextRequest) {
+  if (request.nextUrl.pathname === '/admin') {
     return NextResponse.redirect(new URL('/admin/dashboard', request.url));
   }
 
-  return response;
+  return NextResponse.next();
 }
 
 export const config = {
-  matcher: ['/admin', '/admin/:path*'],
+  matcher: ['/admin'],
 };
