@@ -30,15 +30,15 @@ const pt: Translation = {
     ],
   },
   home: {
-    introTitle: 'Hotel Boutique em Inhambane',
+    introTitle: '',
     introSubtitle:
-      'Na baía onde os dhows ancestrais ainda cruzam o horizonte, a Casa do Capitão é um refúgio que não procura chamar a atenção. Deixa que fale o mar. Que se escute o silêncio. Que o tempo passe mais devagar.',
+      'Há mais de um século, este era o lugar de onde o Capitão do Porto observava a Baía de Inhambane e orientava as embarcações que chegavam à cidade. Hoje, esse mesmo cenário recebe viajantes de todo o mundo, preservando a sua herança marítima enquanto oferece uma experiência de hospitalidade contemporânea.',
     introCta: 'Sobre o Hotel',
     roomsTitle: 'Quartos com vista para o Índico ou o abrigo do vento',
     roomsCta: 'Todos os quartos',
-    amenitiesTitle: 'A viagem ganha sentido aqui',
+    amenitiesTitle: 'Experiências que elevam a sua estadia',
     amenitiesSubtitle:
-      'Um parêntesis de calma e vistas que pedem uma pausa na rotina. Um espaço onde não há nada urgente, apenas sentir. Apenas desfrutar.',
+      'Do pequeno-almoço servido à beira da piscina às salas para eventos corporativos, cada espaço do Hotel Casa Do Capitão foi pensado para quem exige o melhor.',
     amenitiesCta: 'Mais sobre o hotel',
     instagramTitle: 'Viajar é uma forma de estar.',
     instagramSubtitle:
@@ -111,15 +111,15 @@ const en: Translation = {
     ],
   },
   home: {
-    introTitle: 'Boutique Hotel in Inhambane',
+    introTitle: '',
     introSubtitle:
-      'On the bay where ancestral dhows still cross the horizon, Casa do Capitão is a refuge that does not seek attention. Let the sea speak. Let silence be heard. Let time pass more slowly.',
+      'More than a century ago, this was where the Harbour Captain watched over Inhambane Bay and guided the vessels arriving in the city. Today, the same setting welcomes travellers from around the world, preserving its maritime heritage while offering a contemporary hospitality experience.',
     introCta: 'About the Hotel',
     roomsTitle: 'Rooms facing the Indian Ocean or sheltered from the wind',
     roomsCta: 'All rooms',
-    amenitiesTitle: 'The journey makes sense here',
+    amenitiesTitle: 'Experiences that elevate your stay',
     amenitiesSubtitle:
-      'A parenthesis of calm and views that require a pause in routine. A space where nothing is urgent, only feel. Only enjoy.',
+      'From poolside breakfast to corporate event spaces, every corner of Hotel Casa Do Capitão is designed for those who expect the very best.',
     amenitiesCta: 'More about the hotel',
     instagramTitle: 'Traveling is a way of being.',
     instagramSubtitle:

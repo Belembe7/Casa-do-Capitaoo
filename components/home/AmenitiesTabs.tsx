@@ -9,12 +9,11 @@ import { useI18n } from '@/lib/i18n/context';
 import { useSiteContent } from '@/lib/i18n/hooks';
 
 const amenityImages = {
-  rooftop: 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1200&q=80',
-  lobby: 'https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=1200&q=80',
-  gym: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80',
+  lobby: '/images/amenity-sala-conferencia.png',
+  gym: '/images/amenity-salao.png',
 };
 
-const amenityIds = ['rooftop', 'lobby', 'gym'] as const;
+const amenityIds = ['lobby', 'gym'] as const;
 
 export default function AmenitiesTabs() {
   const { t } = useI18n();

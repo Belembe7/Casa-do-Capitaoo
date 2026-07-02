@@ -67,15 +67,27 @@ export default function ContactoPage() {
                 <p>{HOTEL_INFO.address}</p>
               </div>
               <div>
-                <h3 className="text-xs uppercase tracking-widest text-secondary mb-2">{p.emailLabel}</h3>
+                <h3 className="text-xs uppercase tracking-widest text-secondary mb-2">Informação</h3>
                 <a href={`mailto:${HOTEL_INFO.email}`} className="hover:text-secondary transition-colors">
                   {HOTEL_INFO.email}
                 </a>
               </div>
               <div>
-                <h3 className="text-xs uppercase tracking-widest text-secondary mb-2">{p.phoneLabel}</h3>
+                <h3 className="text-xs uppercase tracking-widest text-secondary mb-2">Reservas</h3>
+                <a href={`mailto:${HOTEL_INFO.reservationsEmail}`} className="hover:text-secondary transition-colors">
+                  {HOTEL_INFO.reservationsEmail}
+                </a>
+              </div>
+              <div>
+                <h3 className="text-xs uppercase tracking-widest text-secondary mb-2">Telemóvel</h3>
                 <a href={`tel:${HOTEL_INFO.phone}`} className="hover:text-secondary transition-colors">
                   {HOTEL_INFO.phone}
+                </a>
+              </div>
+              <div>
+                <h3 className="text-xs uppercase tracking-widest text-secondary mb-2">Telefax</h3>
+                <a href={`tel:${HOTEL_INFO.fax}`} className="hover:text-secondary transition-colors">
+                  {HOTEL_INFO.fax}
                 </a>
               </div>
               <a

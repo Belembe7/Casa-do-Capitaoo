@@ -4,6 +4,8 @@ export interface BlogPost {
   category: string;
   excerpt: string;
   coverImage: string;
+  coverWidth?: number;
+  coverHeight?: number;
   content: string;
   publishedAt: string;
 }
@@ -11,23 +13,35 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: 'historia-maritima-inhambane',
-    title: 'A História Marítima de Inhambane: Onde o Tempo Encontra o Mar',
+    title: 'A História do Hotel Casa do Capitão',
     category: 'História',
     excerpt:
-      'Descubra como Inhambane se tornou um dos portos mais importantes do Índico e a ligação profunda com os navegadores portugueses.',
-    coverImage: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80',
+      'Há mais de um século, este era o lugar de onde o Capitão do Porto observava a Baía de Inhambane e orientava as embarcações que chegavam à cidade. Hoje, esse mesmo cenário recebe viajantes de todo o mundo, preservando a sua herança marítima enquanto oferece uma experiência de hospitalidade contemporânea.',
+    coverImage: '/images/blog-hotel-facade.png',
+    coverWidth: 1024,
+    coverHeight: 699,
     content: `
-## Um Porto de Histórias
+Há mais de um século, este era o lugar de onde o Capitão do Porto observava a Baía de Inhambane e orientava as embarcações que chegavam à cidade. Hoje, esse mesmo cenário recebe viajantes de todo o mundo, preservando a sua herança marítima enquanto oferece uma experiência de hospitalidade contemporânea.
 
-Inhambane, cuja etimologia significa "lugar de abundância de água doce", foi durante séculos um dos portos mais estratégicos do Oceano Índico. Os navegadores portugueses chegaram em 1534, atraídos pela baía protegida e pelas rotas comerciais que ligavam África, Ásia e Europa.
+## Residência do Capitão do Porto (Antes de 1885)
 
-## A Casa do Capitão
+A residência oficial do Capitão do Porto, voltada para a Baía de Inhambane.
 
-O nosso hotel nasceu desta herança. O edifício que hoje abriga a Casa do Capitão foi outrora a residência de um capitão de mar que comandava as embarcações que cruzavam o Índico. Cada detalhe da nossa decoração honra essa memória — dos azulejos originais às vigas de madeira recuperadas dos dhows tradicionais.
+## Clube Comodoro (1918)
 
-## Viver a História
+O edifício torna-se um espaço de convívio para oficiais da marinha, reforçando a sua ligação ao mar.
 
-Hoje, convidamo-lo a fazer parte desta narrativa. Caminhe pelas ruas de Inhambane, visite a mesquita mais antiga do sul de África, e regresse à Casa do Capitão para contemplar o mesmo horizonte que fascinou navegadores há cinco séculos.
+## Reabilitação (2007)
+
+Inicia-se a recuperação do património para dar origem a um novo capítulo da sua história.
+
+## Nasce o Hotel Casa do Capitão (2010)
+
+O hotel abre portas, preservando o legado histórico e oferecendo uma experiência contemporânea.
+
+## Hoje
+
+Um dos hotéis de referência em Inhambane, onde história, hospitalidade e a beleza da baía se encontram.
     `,
     publishedAt: '2026-01-15',
   },
@@ -62,7 +76,9 @@ Visite de manhã cedo para evitar multidões e aproveite o pequeno-almoço na pr
     category: 'Gastronomia',
     excerpt:
       'Do matapa às grelhadas de marisco fresco — explore os sabores autênticos da cozinha moçambicana no nosso restaurante.',
-    coverImage: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80',
+    coverImage: '/images/blog-gastronomia.png',
+    coverWidth: 1024,
+    coverHeight: 683,
     content: `
 ## Tradição e Inovação
 
@@ -83,7 +99,9 @@ O Restaurante Capitão celebra a riqueza gastronómica de Moçambique, combinand
     category: 'Destino',
     excerpt:
       'Passeie pelas ruas coloniais, visite a mesquita histórica e descubra porque Inhambane é considerada uma das cidades mais bonitas de Moçambique.',
-    coverImage: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80',
+    coverImage: '/images/blog-inhambane.png',
+    coverWidth: 768,
+    coverHeight: 1024,
     content: `
 ## Arquitectura Colonial
 

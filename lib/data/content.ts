@@ -3,31 +3,98 @@ export interface GalleryImage {
   src: string;
   alt: string;
   category: string;
+  width: number;
+  height: number;
 }
 
 export const galleryImages: GalleryImage[] = [
-  { id: '1', src: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80', alt: 'Fachada do hotel', category: 'hotel' },
-  { id: '2', src: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80', alt: 'Suite Capitão', category: 'quartos' },
-  { id: '3', src: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80', alt: 'Piscina', category: 'piscina' },
-  { id: '4', src: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80', alt: 'Restaurante', category: 'restaurante' },
-  { id: '5', src: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80', alt: 'Praia de Inhambane', category: 'praia' },
-  { id: '6', src: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80', alt: 'Evento no terraço', category: 'eventos' },
-  { id: '7', src: 'https://images.unsplash.com/photo-1591088398332-8a7791972843?w=800&q=80', alt: 'Quarto Vista Mar', category: 'quartos' },
-  { id: '8', src: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80', alt: 'Pratos do restaurante', category: 'restaurante' },
-  { id: '9', src: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80', alt: 'Bar Rooftop', category: 'hotel' },
-  { id: '10', src: 'https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=800&q=80', alt: 'Área comum', category: 'areas-comuns' },
-  { id: '11', src: 'https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=800&q=80', alt: 'Pôr do sol', category: 'praia' },
-  { id: '12', src: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80', alt: 'Jardim tropical', category: 'areas-comuns' },
+  {
+    id: 'fachada-hotel',
+    src: '/images/hotel-intro-bg.png',
+    alt: 'Fachada do Hotel Casa do Capitão',
+    category: 'hotel',
+    width: 1024,
+    height: 699,
+  },
+  {
+    id: 'piscina-por-do-sol-panoramica',
+    src: '/images/o-hotel/hero-pool-sunset.png',
+    alt: 'Piscina do hotel ao pôr do sol',
+    category: 'piscina',
+    width: 1024,
+    height: 349,
+  },
+  {
+    id: 'piscina-por-do-sol',
+    src: '/images/instagram/01-pool-sunset.png',
+    alt: 'Piscina e baía ao entardecer',
+    category: 'piscina',
+    width: 1024,
+    height: 575,
+  },
+  {
+    id: 'piscina-noite',
+    src: '/images/highlights/01-pool-night.png',
+    alt: 'Piscina iluminada à noite',
+    category: 'piscina',
+    width: 1024,
+    height: 1024,
+  },
+  {
+    id: 'piscina-dia',
+    src: '/images/instagram/05-pool-day.png',
+    alt: 'Piscina com vista para o Oceano Índico',
+    category: 'piscina',
+    width: 1024,
+    height: 667,
+  },
+  {
+    id: 'piscina-vista',
+    src: '/images/instagram/06-pool-aerial.png',
+    alt: 'Área da piscina e baía de Inhambane',
+    category: 'piscina',
+    width: 1024,
+    height: 768,
+  },
+  {
+    id: 'pequeno-almoco',
+    src: '/images/amenity-pool-breakfast.png',
+    alt: 'Pequeno-almoço servido à beira da piscina',
+    category: 'restaurante',
+    width: 1024,
+    height: 681,
+  },
+  {
+    id: 'restaurante-vista-mar',
+    src: '/images/instagram/04-restaurant.png',
+    alt: 'Restaurante com vista para o mar',
+    category: 'restaurante',
+    width: 1024,
+    height: 678,
+  },
+  {
+    id: 'varanda-baia',
+    src: '/images/highlights/02-balcony-view.png',
+    alt: 'Varanda com vista para a baía',
+    category: 'hotel',
+    width: 1024,
+    height: 759,
+  },
+  {
+    id: 'terraco-baia',
+    src: '/images/highlights/03-resort-bay.png',
+    alt: 'Terraço do hotel com vista para a baía',
+    category: 'areas-comuns',
+    width: 1024,
+    height: 577,
+  },
 ];
 
 export const galleryCategories = [
   { slug: 'todos', label: 'Todos' },
   { slug: 'hotel', label: 'Hotel' },
-  { slug: 'quartos', label: 'Quartos' },
   { slug: 'restaurante', label: 'Restaurante' },
   { slug: 'piscina', label: 'Piscina' },
-  { slug: 'eventos', label: 'Eventos' },
-  { slug: 'praia', label: 'Praia' },
   { slug: 'areas-comuns', label: 'Áreas Comuns' },
 ];
 

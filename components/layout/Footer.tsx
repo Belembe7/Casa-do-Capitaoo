@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Facebook, Instagram, Youtube, Linkedin } from 'lucide-react';
-import NewsletterForm from '@/components/ui/NewsletterForm';
 import { HOTEL_INFO } from '@/lib/utils';
 import { useI18n } from '@/lib/i18n/context';
 import { useSiteContent } from '@/lib/i18n/hooks';
@@ -26,7 +25,6 @@ export default function Footer() {
       links: [
         { label: f.rooms, href: '/quartos' },
         { label: f.theHotel, href: '/o-hotel' },
-        { label: f.rooftop, href: '/rooftop' },
         { label: f.gallery, href: '/galeria' },
         { label: f.services, href: '/servicos' },
       ],
@@ -89,13 +87,6 @@ export default function Footer() {
           >
             {f.whatsapp}
           </a>
-        </div>
-      </div>
-
-      <div className="section-padding py-12 border-t border-white/10">
-        <div className="max-w-xl mx-auto text-center">
-          <h3 className="font-display text-2xl mb-6">{t.footer.newsletter}</h3>
-          <NewsletterForm />
         </div>
       </div>
 

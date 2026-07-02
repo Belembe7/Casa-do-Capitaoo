@@ -5,7 +5,7 @@ import { rooms } from '@/lib/data/rooms';
 import { offers } from '@/lib/data/offers';
 
 const AMENITY_IMAGES = [
-  'https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1200&q=80',
+  '/images/amenity-pool-breakfast.png',
   'https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=1200&q=80',
   'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80',
 ];

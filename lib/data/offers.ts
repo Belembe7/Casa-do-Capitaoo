@@ -24,7 +24,7 @@ export const offers: Offer[] = [
     title: 'Romance do Capitão',
     description:
       'Pacote romântico para casais: jantar à luz de velas no terraço, garrafa de vinho e late check-out gratuito. Perfeito para lua de mel ou aniversário.',
-    image: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80',
+    image: '/images/offer-casais.png',
     badge: 'Casais',
     bookingUrl: '/reservar?oferta=romance-capitao',
     validUntil: '2026-12-31',
@@ -38,16 +38,6 @@ export const offers: Offer[] = [
     badge: '4=3',
     bookingUrl: '/reservar?oferta=verao-inhambane',
     validUntil: '2026-03-31',
-  },
-  {
-    slug: 'aventura-tofo',
-    title: 'Aventura Tofo',
-    description:
-      'Combinação hotel + mergulho com tubarões-baleia em Tofo. Inclui transporte, equipamento e guia certificado.',
-    image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80',
-    badge: 'Aventura',
-    bookingUrl: '/reservar?oferta=aventura-tofo',
-    validUntil: '2026-10-31',
   },
 ];
 

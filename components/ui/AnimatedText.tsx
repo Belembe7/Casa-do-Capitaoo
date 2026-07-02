@@ -7,6 +7,7 @@ interface AnimatedTextProps {
   as?: 'h1' | 'h2' | 'h3' | 'p' | 'span';
   className?: string;
   delay?: number;
+  stagger?: number;
 }
 
 export default function AnimatedText({
@@ -14,6 +15,7 @@ export default function AnimatedText({
   as: Tag = 'h2',
   className = '',
   delay = 0,
+  stagger = 0.1,
 }: AnimatedTextProps) {
   const words = text.split(' ');
 
@@ -25,7 +27,7 @@ export default function AnimatedText({
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: delay + i * 0.1 }}
+          transition={{ duration: 0.5, delay: delay + i * stagger }}
           className="inline-block mr-[0.25em]"
         >
           {word}

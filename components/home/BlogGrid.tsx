@@ -32,7 +32,7 @@ export default function BlogGrid() {
         />
 
         <motion.div
-          className="grid gap-8 lg:grid-cols-5 lg:gap-10 xl:gap-12"
+          className="grid gap-10 lg:grid-cols-5 lg:gap-12 xl:gap-14"
           variants={staggerContainerVariants}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
@@ -44,15 +44,16 @@ export default function BlogGrid() {
             <BlogFeaturedPost post={featured} />
           </motion.div>
 
-          {listPosts.map((post, i) => (
+          {listPosts.length > 0 && (
             <motion.div
-              key={post.slug}
-              variants={staggerItemVariants(i + 1)}
-              className="flex items-center lg:col-span-2"
+              variants={staggerItemVariants(1)}
+              className="flex flex-col gap-8 lg:col-span-2 lg:justify-center"
             >
-              <BlogListItem post={post} />
+              {listPosts.map((post) => (
+                <BlogListItem key={post.slug} post={post} />
+              ))}
             </motion.div>
-          ))}
+          )}
         </motion.div>
 
         <BlogHighlights animate={isInView} />

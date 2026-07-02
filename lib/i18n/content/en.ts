@@ -4,15 +4,18 @@ export const EN_CONTENT: SiteContent = {
   amenities: {
     rooftop: {
       label: 'Rooftop Bar',
-      description: 'Sunset cocktails with panoramic views over Inhambane Bay.',
+      description:
+        'Poolside breakfast with bay views and personalised five-star service.',
     },
     lobby: {
-      label: 'Lobby Bar',
-      description: 'A welcoming atmosphere with selected wines and house snacks.',
+      label: 'Conference Room',
+      description:
+        'An elegant, fully equipped space for corporate meetings, presentations and business events with bay views.',
     },
     gym: {
-      label: 'Gym',
-      description: 'Modern equipment with views of the tropical garden.',
+      label: 'Salon',
+      description:
+        'A versatile hall for social events, celebrations and gatherings in a refined, welcoming setting.',
     },
   },
   rooms: {
@@ -121,27 +124,28 @@ export const EN_CONTENT: SiteContent = {
     oHotel: {
       title: 'The Hotel',
       intro:
-        'On the bay where ancestral dhows still cross the horizon, Casa do Capitão is a refuge that does not seek attention. Let the sea speak.',
+        'More than a century ago, this was where the Harbour Captain watched over Inhambane Bay. Today, the pool, terrace and 270-degree view welcome travellers from around the world in a contemporary luxury experience.',
       sections: [
         {
-          title: 'A Maritime Heritage',
-          text: 'Casa do Capitão was born from the rich maritime history of Inhambane. The building that now houses our hotel was once the residence of a sea captain who commanded vessels crossing the Indian Ocean between Africa, Asia and Europe.',
+          title: 'Poolside Breakfast',
+          text: 'Start the day with breakfast served by the pool, overlooking Inhambane Bay. Our personalised five-star service turns every morning into a moment of calm, flavour and exclusivity.',
         },
         {
-          title: 'Architecture and Soul',
-          text: 'Every detail honours the memory of this land: from original tiles to wooden beams reclaimed from traditional dhows. We combine historic heritage with contemporary comfort to create a unique refuge on Inhambane Bay.',
+          title: 'Pool with Indian Ocean Views',
+          text: 'Our pool stretches towards the Indian Ocean, surrounded by sun loungers, palm trees and natural light. An invitation to refresh body and mind while contemplating the serene rhythm of the bay.',
         },
         {
-          title: 'The Tropical Garden',
-          text: 'Our garden is an oasis of palm trees, tropical flowers and the distant sound of waves. A space to contemplate, read a book in the shade or simply let time pass.',
+          title: 'Bay View',
+          text: 'Inhambane Bay wraps around the hotel with a wide, luminous outlook. Among gardens, palm trees and the sea beyond, every space is designed for those who seek comfort, elegance and connection with the landscape.',
         },
       ],
       historyTitle: 'Our History',
       timeline: [
-        { year: '1534', event: 'Portuguese navigators arrive in Inhambane' },
-        { year: '1854', event: 'Construction of the residence that is now the hotel' },
-        { year: '2018', event: 'Restoration and opening of Casa do Capitão' },
-        { year: '2024', event: 'Rooftop Bar expansion and new suites' },
+        { year: 'Before 1885', event: 'Official residence of the Harbour Captain, facing Inhambane Bay.' },
+        { year: '1918', event: 'The building becomes the Comodoro Club, a gathering place for naval officers.' },
+        { year: '2007', event: 'Heritage restoration begins, opening a new chapter in its history.' },
+        { year: '2010', event: 'Hotel Casa do Capitão opens, preserving historic legacy with contemporary hospitality.' },
+        { year: 'Today', event: 'One of Inhambane\'s landmark hotels, where history, comfort and the beauty of the bay meet.' },
       ],
       galleryCta: 'View Gallery',
     },

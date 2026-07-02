@@ -1,5 +1,7 @@
+import { PHASE_DEVELOPMENT_SERVER } from 'next/constants.js';
+
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const baseConfig = {
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'images.unsplash.com' },
@@ -9,13 +11,10 @@ const nextConfig = {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 60 * 60 * 24 * 7,
   },
-  outputFileTracingExcludes: {
-    '*': [
-      'node_modules/@swc/**',
-      'node_modules/webpack/**',
-      'node_modules/esbuild/**',
-    ],
-  },
 };
 
-export default nextConfig;
+export default (phase) => ({
+  ...baseConfig,
+  // Keeps dev artifacts isolated from production builds to avoid missing chunk/css issues.
+  distDir: phase === PHASE_DEVELOPMENT_SERVER ? '.next-dev' : '.next',
+});

@@ -4,15 +4,18 @@ export const PT_CONTENT: SiteContent = {
   amenities: {
     rooftop: {
       label: 'Rooftop Bar',
-      description: 'Cocktails ao pôr do sol com vista panorâmica para a baía de Inhambane.',
+      description:
+        'Pequeno-almoço à beira da piscina com vista para a baía e serviço personalizado de estilo "5 estrelas".',
     },
     lobby: {
-      label: 'Lobby Bar',
-      description: 'Ambiente acolhedor com vinhos selecionados e petiscos da casa.',
+      label: 'Sala de Conferências',
+      description:
+        'Espaço elegante e equipado para reuniões corporativas, apresentações e eventos de negócios com vista para a baía.',
     },
     gym: {
-      label: 'Ginásio',
-      description: 'Equipamento moderno com vista para o jardim tropical.',
+      label: 'Salão',
+      description:
+        'Salão versátil para eventos sociais, celebrações e encontros num ambiente refinado e acolhedor.',
     },
   },
   rooms: {
@@ -121,27 +124,28 @@ export const PT_CONTENT: SiteContent = {
     oHotel: {
       title: 'O Hotel',
       intro:
-        'Na baía onde os dhows ancestrais ainda cruzam o horizonte, a Casa do Capitão é um refúgio que não procura chamar a atenção. Deixa que fale o mar.',
+        'Há mais de um século, este era o lugar de onde o Capitão do Porto observava a Baía de Inhambane e orientava as embarcações que chegavam à cidade. Hoje, esse mesmo cenário recebe viajantes de todo o mundo, preservando a sua herança marítima enquanto oferece uma experiência de hospitalidade contemporânea.',
       sections: [
         {
-          title: 'Uma Herança Marítima',
-          text: 'A Casa do Capitão nasceu da rica história marítima de Inhambane. O edifício que hoje abriga o nosso hotel foi outrora a residência de um capitão de mar que comandava as embarcações que cruzavam o Índico entre África, Ásia e Europa.',
+          title: 'Pequeno-almoço à Beira da Piscina',
+          text: 'Comece o dia com um pequeno-almoço servido à beira da piscina, com vista para a baía de Inhambane. O nosso serviço personalizado de estilo "5 estrelas" transforma cada manhã num momento de calma, sabor e exclusividade.',
         },
         {
-          title: 'Arquitectura e Alma',
-          text: 'Cada detalhe honra a memória desta terra: dos azulejos originais às vigas de madeira recuperadas dos dhows tradicionais. Combinamos património histórico com conforto contemporâneo para criar um refúgio único na baía de Inhambane.',
+          title: 'Piscina com Vista para o Índico',
+          text: 'A nossa piscina estende-se em direção ao Oceano Índico, rodeada de espreguiçadeiras, palmeiras e luz natural. Um convite para refrescar o corpo, contemplar o horizonte e sentir o ritmo sereno da baía.',
         },
         {
-          title: 'O Jardim Tropical',
-          text: 'O nosso jardim é um oásis de palmeiras, flores tropicais e o som distante das ondas. Um espaço para contemplar, ler um livro à sombra ou simplesmente deixar o tempo passar.',
+          title: 'Vista da Baía',
+          text: 'A baía de Inhambane envolve o hotel com uma vista ampla e luminosa. Entre jardins, palmeiras e o mar ao fundo, cada espaço foi pensado para quem procura conforto, elegância e contacto com a paisagem.',
         },
       ],
       historyTitle: 'A Nossa História',
       timeline: [
-        { year: '1534', event: 'Navegadores portugueses chegam a Inhambane' },
-        { year: '1854', event: 'Construção da residência que hoje é o hotel' },
-        { year: '2018', event: 'Restauração e abertura da Casa do Capitão' },
-        { year: '2024', event: 'Expansão do Rooftop Bar e novas suites' },
+        { year: 'Antes de 1885', event: 'Residência oficial do Capitão do Porto, voltada para a Baía de Inhambane.' },
+        { year: '1918', event: 'O edifício torna-se o Clube Comodoro, espaço de convívio para oficiais da marinha.' },
+        { year: '2007', event: 'Inicia-se a reabilitação do património para um novo capítulo da sua história.' },
+        { year: '2010', event: 'Nasce o Hotel Casa do Capitão, preservando o legado histórico com hospitalidade contemporânea.' },
+        { year: 'Hoje', event: 'Um dos hotéis de referência em Inhambane, onde história, conforto e a beleza da baía se encontram.' },
       ],
       galleryCta: 'Ver Galeria',
     },

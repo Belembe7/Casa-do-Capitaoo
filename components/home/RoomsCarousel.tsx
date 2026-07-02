@@ -36,9 +36,11 @@ export default function RoomsCarousel() {
     return () => { emblaApi.off('select', onSelect); };
   }, [emblaApi]);
 
+  const featuredOffer = offers.find((offer) => offer.slug !== 'escapada-maritima');
+
   const carouselItems = [
     ...rooms.slice(0, 4).map((r) => ({ type: 'room' as const, data: r })),
-    { type: 'offer' as const, data: offers[0] },
+    ...(featuredOffer ? [{ type: 'offer' as const, data: featuredOffer }] : []),
     ...rooms.slice(4).map((r) => ({ type: 'room' as const, data: r })),
   ];
 

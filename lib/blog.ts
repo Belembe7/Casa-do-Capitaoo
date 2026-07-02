@@ -13,10 +13,8 @@ export function getPostReadTime(post: BlogPost): number {
 
 export function formatBlogMeta(
   post: BlogPost,
-  locale: string,
-  minReadLabel: string
+  locale: string
 ): string {
   const date = formatDate(post.publishedAt, locale);
-  const minutes = getPostReadTime(post);
-  return `${date} · ${minutes} ${minReadLabel}`;
+  return date;
 }

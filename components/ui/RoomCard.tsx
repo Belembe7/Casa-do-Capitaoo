@@ -7,7 +7,6 @@ import { motion } from 'framer-motion';
 import { useI18n } from '@/lib/i18n/context';
 import { useSiteContent } from '@/lib/i18n/hooks';
 import type { Room } from '@/lib/data/rooms';
-import { formatCurrency } from '@/lib/utils';
 
 interface RoomCardProps {
   room: Room;
@@ -57,10 +56,6 @@ export default function RoomCard({ room, index = 0, priority = false }: RoomCard
         <h3 className="font-display text-xl">{room.name}</h3>
         <p className="text-sm text-text-light line-clamp-2">
           {room.shortDescription}
-        </p>
-        <p className="text-sm font-medium">
-          {formatCurrency(room.pricePerNight)}
-          <span className="text-text-light font-normal"> {content.labels.perNight}</span>
         </p>
         <div className="flex gap-3 pt-2">
           <Link href="/reservar" className="btn-primary text-xs px-4 py-2">

@@ -14,13 +14,38 @@ import {
   staggerItemVariants,
 } from '@/lib/animations/staggeredEntry';
 
-const instagramImages = [
-  { src: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80', tall: true },
-  { src: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&q=80', wide: false },
-  { src: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80', wide: false },
-  { src: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80', wide: true },
-  { src: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80', tall: false },
-  { src: 'https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=600&q=80', wide: false },
+const galleryImages = [
+  {
+    src: '/images/instagram/02-breakfast.png',
+    width: 1024,
+    height: 349,
+    alt: 'Pequeno-almoço à beira da piscina',
+    span: 'full' as const,
+  },
+  {
+    src: '/images/instagram/03-seafood.png',
+    width: 1024,
+    height: 681,
+    alt: 'Jantar de marisco ao pôr do sol',
+  },
+  {
+    src: '/images/instagram/04-restaurant.png',
+    width: 1024,
+    height: 678,
+    alt: 'Restaurante com vista para o mar',
+  },
+  {
+    src: '/images/instagram/05-pool-day.png',
+    width: 1024,
+    height: 667,
+    alt: 'Piscina do hotel',
+  },
+  {
+    src: '/images/instagram/06-pool-aerial.png',
+    width: 1024,
+    height: 768,
+    alt: 'Vista da piscina e baía',
+  },
 ];
 
 export default function InstagramFeed() {
@@ -41,37 +66,40 @@ export default function InstagramFeed() {
 
       <motion.div
         ref={gridRef}
-        className="masonry-grid"
+        className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4"
         variants={staggerContainerVariants}
         initial="hidden"
         animate={isInView ? 'visible' : 'hidden'}
       >
-        {instagramImages.map((img, i) => (
+        {galleryImages.map((img, i) => (
           <motion.div
-            key={i}
+            key={img.src}
             variants={staggerItemVariants(i)}
-            className={`group relative overflow-hidden ${
-              img.tall ? 'masonry-item-tall' : img.wide ? 'masonry-item-wide' : ''
-            } ${i === 2 ? 'aspect-square' : 'min-h-[200px]'}`}
+            className={img.span === 'full' ? 'md:col-span-2' : undefined}
           >
             <Link
               href={HOTEL_INFO.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="absolute inset-0 block"
+              className="group relative block overflow-hidden"
             >
               <Image
                 src={img.src}
-                alt={`Instagram ${i + 1}`}
-                fill
-                priority={i < 3}
-                fetchPriority={i < 3 ? 'high' : undefined}
-                className="object-cover transition-transform duration-slow group-hover:scale-105"
-                sizes="(max-width: 768px) 50vw, 33vw"
+                alt={img.alt}
+                width={img.width}
+                height={img.height}
+                priority={i < 2}
+                fetchPriority={i < 2 ? 'high' : undefined}
+                className="w-full h-auto block"
+                sizes={
+                  img.span === 'full'
+                    ? '100vw'
+                    : '(max-width: 768px) 100vw, 50vw'
+                }
               />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-base flex items-center justify-center">
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-base flex items-center justify-center">
                 <Instagram
-                  size={32}
+                  size={28}
                   className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-base"
                 />
               </div>

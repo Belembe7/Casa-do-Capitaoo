@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import type { BlogPost } from '@/lib/data/blog-posts';
 import { formatBlogMeta } from '@/lib/blog';
 import { useI18n } from '@/lib/i18n/context';
@@ -11,33 +12,46 @@ interface BlogFeaturedPostProps {
 }
 
 export default function BlogFeaturedPost({ post }: BlogFeaturedPostProps) {
-  const { locale, t } = useI18n();
-  const meta = formatBlogMeta(post, locale, t.common.minRead);
+  const { locale } = useI18n();
+  const meta = formatBlogMeta(post, locale);
 
   return (
     <article className="group">
       <Link href={`/blog/${post.slug}`} className="block">
-        <div className="relative mb-5 aspect-[16/10] overflow-hidden rounded-3xl">
+        <div className="mb-6 overflow-hidden rounded-2xl">
           <Image
             src={post.coverImage}
             alt={post.title}
-            fill
-            className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+            width={post.coverWidth ?? 800}
+            height={post.coverHeight ?? 533}
+            className="w-full h-auto block"
             sizes="(max-width: 768px) 100vw, 60vw"
             priority
           />
         </div>
-        <div className="space-y-3">
-          <span className="text-xs font-semibold uppercase tracking-wide text-sky-600">
+
+        <div className="space-y-4 max-w-2xl">
+          <span className="inline-block text-[11px] font-body font-medium uppercase tracking-[0.22em] text-secondary">
             {post.category}
           </span>
-          <h3 className="font-display text-2xl md:text-3xl font-semibold leading-tight text-primary transition-colors group-hover:text-sky-700">
+
+          <h3 className="font-display text-[1.625rem] md:text-[2rem] font-normal leading-[1.25] tracking-[-0.01em] text-primary transition-colors duration-300 group-hover:text-secondary">
             {post.title}
           </h3>
-          <p className="text-sm text-text-light">{meta}</p>
-          <p className="text-base leading-relaxed text-gray-600 line-clamp-2 md:line-clamp-3">
-            {post.excerpt}
+
+          <p className="font-body text-[12px] uppercase tracking-[0.14em] text-text-light">
+            {meta}
           </p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1] }}
+            className="font-body text-[15px] md:text-base font-light leading-[1.8] text-text-main/75 line-clamp-4 md:line-clamp-5"
+          >
+            {post.excerpt}
+          </motion.p>
         </div>
       </Link>
     </article>

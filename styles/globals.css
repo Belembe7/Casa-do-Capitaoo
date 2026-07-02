@@ -118,26 +118,6 @@
   to { opacity: 1; }
 }
 
-.masonry-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem;
-}
-
-@media (max-width: 768px) {
-  .masonry-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.masonry-item-tall {
-  grid-row: span 2;
-}
-
-.masonry-item-wide {
-  grid-column: span 2;
-}
-
 ::-webkit-scrollbar {
   width: 6px;
 }

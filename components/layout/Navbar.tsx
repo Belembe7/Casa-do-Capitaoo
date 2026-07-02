@@ -11,10 +11,8 @@ import LanguageSwitcher from '@/components/layout/LanguageSwitcher';
 const navLinks = [
   { href: '/quartos', key: 'rooms' as const, external: false },
   { href: '/o-hotel', key: 'hotel' as const, external: false },
-  { href: '/rooftop', key: 'rooftop' as const, external: false },
   { href: '/galeria', key: 'gallery' as const, external: false },
   { href: '/ofertas', key: 'offers' as const, external: false },
-  { href: HOTEL_INFO.shopUrl, key: 'shop' as const, external: true },
   { href: '/contacto', key: 'contact' as const, external: false },
 ];
 
