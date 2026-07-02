@@ -25,12 +25,12 @@ export const galleryImages: GalleryImage[] = [
     height: 349,
   },
   {
-    id: 'piscina-por-do-sol',
-    src: '/images/instagram/01-pool-sunset.png',
-    alt: 'Piscina e baía ao entardecer',
-    category: 'piscina',
+    id: 'gastronomia-marisco',
+    src: '/images/gallery-gastronomia.png',
+    alt: 'Marisco fresco servido à beira da piscina',
+    category: 'restaurante',
     width: 1024,
-    height: 575,
+    height: 683,
   },
   {
     id: 'piscina-noite',

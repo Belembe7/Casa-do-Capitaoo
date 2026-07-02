@@ -26,7 +26,7 @@ export default function Gallery() {
           <p className="mb-3 text-[11px] uppercase tracking-[0.22em] text-secondary">
             Hotel Casa do Capitão
           </p>
-          <h1 className="font-display text-4xl font-normal tracking-tight text-primary md:text-5xl lg:text-6xl">
+          <h1 className="font-display text-4xl font-bold tracking-tight text-primary md:text-5xl lg:text-6xl">
             Galeria
           </h1>
           <p className="mt-4 max-w-2xl text-base text-text-light leading-relaxed">

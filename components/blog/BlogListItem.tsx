@@ -35,7 +35,7 @@ export default function BlogListItem({ post }: BlogListItemProps) {
             {post.category}
           </span>
 
-          <h3 className="font-display text-[1.05rem] md:text-[1.125rem] font-normal leading-[1.35] tracking-[-0.01em] text-primary transition-colors duration-300 group-hover:text-secondary line-clamp-2">
+          <h3 className="font-display text-[1.05rem] md:text-[1.125rem] font-semibold leading-[1.35] tracking-[-0.01em] text-primary transition-colors duration-300 group-hover:text-secondary line-clamp-2">
             {post.title}
           </h3>
 

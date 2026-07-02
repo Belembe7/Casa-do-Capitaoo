@@ -9,7 +9,7 @@ interface BlogSectionHeaderProps {
 export default function BlogSectionHeader({ title, cta }: BlogSectionHeaderProps) {
   return (
     <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between mb-8 md:mb-10">
-      <h2 className="font-display text-[1.75rem] md:text-[2rem] font-normal tracking-[-0.02em] text-primary">
+      <h2 className="font-display text-[1.75rem] md:text-[2rem] font-bold tracking-[-0.02em] text-primary">
         {title}
       </h2>
       {cta && (

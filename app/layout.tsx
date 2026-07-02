@@ -1,22 +1,10 @@
 import type { Metadata } from 'next';
-import { Playfair_Display, Inter } from 'next/font/google';
 import '@/styles/globals.css';
 import { I18nProvider } from '@/lib/i18n/context';
 import PublicChrome from '@/components/layout/PublicChrome';
 import PageViewTracker from '@/components/analytics/PageViewTracker';
 import { HOTEL_INFO } from '@/lib/utils';
-
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  variable: '--font-display',
-  display: 'swap',
-});
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-body',
-  display: 'swap',
-});
+import { satoshi } from '@/lib/fonts/satoshi';
 
 export const metadata: Metadata = {
   title: {
@@ -59,7 +47,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="pt" className={`${playfair.variable} ${inter.variable}`}>
+    <html lang="pt" className={satoshi.variable}>
       <head>
         <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />

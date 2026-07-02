@@ -131,12 +131,12 @@ export const PT_CONTENT: SiteContent = {
           text: 'Comece o dia com um pequeno-almoço servido à beira da piscina, com vista para a baía de Inhambane. O nosso serviço personalizado de estilo "5 estrelas" transforma cada manhã num momento de calma, sabor e exclusividade.',
         },
         {
-          title: 'Piscina com Vista para o Índico',
-          text: 'A nossa piscina estende-se em direção ao Oceano Índico, rodeada de espreguiçadeiras, palmeiras e luz natural. Um convite para refrescar o corpo, contemplar o horizonte e sentir o ritmo sereno da baía.',
+          title: 'Restaurante com Vista para o Mar',
+          text: 'O Restaurante Capitão convida a saborear a cozinha moçambicana num ambiente elegante e luminoso. Mesas postas com vista para o Oceano Índico, luz natural abundante e o ritmo sereno da baía como pano de fundo de cada refeição.',
         },
         {
-          title: 'Vista da Baía',
-          text: 'A baía de Inhambane envolve o hotel com uma vista ampla e luminosa. Entre jardins, palmeiras e o mar ao fundo, cada espaço foi pensado para quem procura conforto, elegância e contacto com a paisagem.',
+          title: 'Vista da Baía de Inhambane',
+          text: 'A Baía de Inhambane revela-se em todo o seu esplendor diante do hotel: um panorama amplo, luminoso e sereno, onde o mar e o céu se encontram num dos cenários mais emblemáticos de Moçambique.',
         },
       ],
       historyTitle: 'A Nossa História',

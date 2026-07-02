@@ -4,13 +4,14 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { AnimatePresence, motion } from 'framer-motion';
+import { ImageOff } from 'lucide-react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 import { useI18n } from '@/lib/i18n/context';
 import { useSiteContent } from '@/lib/i18n/hooks';
 
-const amenityImages = {
+const amenityImages: Record<(typeof amenityIds)[number], string | null> = {
   lobby: '/images/amenity-sala-conferencia.png',
-  gym: '/images/amenity-salao.png',
+  gym: null,
 };
 
 const amenityIds = ['lobby', 'gym'] as const;
@@ -90,18 +91,32 @@ export default function AmenitiesTabs() {
                 transition={{ duration: 0.5 }}
                 className="absolute inset-0"
               >
-                <Image
-                  src={activeAmenity.image}
-                  alt={activeAmenity.label}
-                  fill
-                  priority={activeAmenity.id === amenities[0].id}
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                <p className="absolute bottom-6 left-6 right-6 text-white text-sm">
-                  {activeAmenity.description}
-                </p>
+                {activeAmenity.image ? (
+                  <>
+                    <Image
+                      src={activeAmenity.image}
+                      alt={activeAmenity.label}
+                      fill
+                      priority={activeAmenity.id === amenities[0].id}
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                    <p className="absolute bottom-6 left-6 right-6 text-white text-sm">
+                      {activeAmenity.description}
+                    </p>
+                  </>
+                ) : (
+                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-[#eceae6] px-6 text-center">
+                    <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/80 text-text-light shadow-sm">
+                      <ImageOff size={26} strokeWidth={1.5} aria-hidden />
+                    </span>
+                    <p className="text-sm font-medium text-primary">Fotografia indisponível</p>
+                    <p className="max-w-xs text-xs leading-relaxed text-text-light">
+                      {activeAmenity.description}
+                    </p>
+                  </div>
+                )}
               </motion.div>
             </AnimatePresence>
           </div>

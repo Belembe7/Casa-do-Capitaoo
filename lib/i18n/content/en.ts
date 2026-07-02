@@ -131,12 +131,12 @@ export const EN_CONTENT: SiteContent = {
           text: 'Start the day with breakfast served by the pool, overlooking Inhambane Bay. Our personalised five-star service turns every morning into a moment of calm, flavour and exclusivity.',
         },
         {
-          title: 'Pool with Indian Ocean Views',
-          text: 'Our pool stretches towards the Indian Ocean, surrounded by sun loungers, palm trees and natural light. An invitation to refresh body and mind while contemplating the serene rhythm of the bay.',
+          title: 'Restaurant with Sea Views',
+          text: 'Restaurante Capitão invites you to savour Mozambican cuisine in an elegant, light-filled setting. Tables laid with views over the Indian Ocean, abundant natural light and the serene rhythm of the bay as the backdrop to every meal.',
         },
         {
-          title: 'Bay View',
-          text: 'Inhambane Bay wraps around the hotel with a wide, luminous outlook. Among gardens, palm trees and the sea beyond, every space is designed for those who seek comfort, elegance and connection with the landscape.',
+          title: 'View of Inhambane Bay',
+          text: 'Inhambane Bay unfolds in all its splendour before the hotel: a wide, luminous and serene panorama where sea and sky meet in one of Mozambique\'s most emblematic settings.',
         },
       ],
       historyTitle: 'Our History',

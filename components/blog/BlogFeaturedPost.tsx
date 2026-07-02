@@ -35,7 +35,7 @@ export default function BlogFeaturedPost({ post }: BlogFeaturedPostProps) {
             {post.category}
           </span>
 
-          <h3 className="font-display text-[1.625rem] md:text-[2rem] font-normal leading-[1.25] tracking-[-0.01em] text-primary transition-colors duration-300 group-hover:text-secondary">
+          <h3 className="font-display text-[1.625rem] md:text-[2rem] font-semibold leading-[1.25] tracking-[-0.01em] text-primary transition-colors duration-300 group-hover:text-secondary">
             {post.title}
           </h3>
 
