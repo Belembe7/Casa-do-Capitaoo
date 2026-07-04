@@ -108,11 +108,17 @@ export const EN_CONTENT: SiteContent = {
     },
     contacto: {
       title: 'Contact',
+      formTitle: 'Get in Touch',
+      formSubtitle:
+        'We are available to answer your questions, special requests or reservations.',
+      responseTime: 'Response within 24 hours.',
+      receptionHours: '24-Hour Reception',
+      submitNote: 'We will respond to your enquiry within 24 hours.',
       addressLabel: 'Address',
       emailLabel: 'Email',
       phoneLabel: 'Phone',
       whatsapp: 'WhatsApp',
-      sendMessage: 'Send message',
+      sendMessage: 'Send Message',
       name: 'Name',
       email: 'Email',
       subject: 'Subject',
@@ -124,7 +130,7 @@ export const EN_CONTENT: SiteContent = {
     oHotel: {
       title: 'The Hotel',
       intro:
-        'More than a century ago, this was where the Harbour Captain watched over Inhambane Bay. Today, the pool, terrace and 270-degree view welcome travellers from around the world in a contemporary luxury experience.',
+        'More than a century ago, this was where the Harbour Captain watched over Inhambane Bay and guided the vessels arriving in the city. Today, the same setting welcomes travellers from around the world, preserving its maritime heritage while offering a contemporary hospitality experience.',
       sections: [
         {
           title: 'Poolside Breakfast',

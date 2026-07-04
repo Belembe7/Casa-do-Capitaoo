@@ -39,6 +39,11 @@ export interface SiteContent {
     quartos: { title: string; intro: string };
     contacto: {
       title: string;
+      formTitle: string;
+      formSubtitle: string;
+      responseTime: string;
+      receptionHours: string;
+      submitNote: string;
       addressLabel: string;
       emailLabel: string;
       phoneLabel: string;

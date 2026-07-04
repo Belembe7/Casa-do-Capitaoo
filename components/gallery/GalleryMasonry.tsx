@@ -10,17 +10,6 @@ interface GalleryMasonryProps {
   onOpenLightbox: (index: number) => void;
 }
 
-const tilePattern = [
-  'tileWide',
-  'tileTall',
-  'tileTall',
-  'tileWide',
-  'tileSquare',
-  'tileSquare',
-  'tileWide',
-  'tileSquare',
-];
-
 export default function GalleryMasonry({ images, onOpenLightbox }: GalleryMasonryProps) {
   if (images.length === 0) {
     return (
@@ -28,8 +17,8 @@ export default function GalleryMasonry({ images, onOpenLightbox }: GalleryMasonr
         <span className="mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-primary/5 text-primary/40">
           <Images size={32} strokeWidth={1.25} aria-hidden />
         </span>
-        <p className="font-display text-2xl text-primary mb-2">Não existem fotografias disponíveis.</p>
-        <p className="text-sm text-text-light max-w-md">
+        <p className="mb-2 font-display text-2xl text-primary">Não existem fotografias disponíveis.</p>
+        <p className="max-w-md text-sm text-text-light">
           Selecione outra categoria ou volte mais tarde para descobrir novos momentos do hotel.
         </p>
       </div>
@@ -37,15 +26,9 @@ export default function GalleryMasonry({ images, onOpenLightbox }: GalleryMasonr
   }
 
   return (
-    <div className={styles.magazineGrid}>
+    <div className={styles.masonryGrid}>
       {images.map((image, index) => (
-        <GalleryItem
-          key={image.id}
-          image={image}
-          index={index}
-          onOpen={onOpenLightbox}
-          tileClassName={styles[tilePattern[index % tilePattern.length]]}
-        />
+        <GalleryItem key={image.id} image={image} index={index} onOpen={onOpenLightbox} />
       ))}
     </div>
   );

@@ -101,7 +101,7 @@ export default function HeroVideo() {
           transition: `opacity ${fadeMs}ms ease-in-out`,
         }}
       >
-        <source src="/videos/hero.mp4" type="video/mp4" />
+        <source src="/videos/hero.mp4?v=2" type="video/mp4" />
       </video>
 
       <div className="absolute inset-0 bg-black/30 z-[2]" />

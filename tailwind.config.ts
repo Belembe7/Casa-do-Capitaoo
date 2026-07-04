@@ -46,6 +46,12 @@ const config: Config = {
           'Arial',
           'sans-serif',
         ],
+        logo: [
+          'var(--font-brand-logo)',
+          'Georgia',
+          '"Times New Roman"',
+          'serif',
+        ],
       },
       spacing: {
         section: 'var(--spacing-section)',

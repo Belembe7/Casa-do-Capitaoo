@@ -7,6 +7,8 @@ type DeepPartial<T> = {
 
 type PartialContent = DeepPartial<SiteContent>;
 
+export type { DeepPartial };
+
 export function mergeContent(overrides: PartialContent): SiteContent {
   const pages = overrides.pages ?? {};
   return {

@@ -55,7 +55,7 @@ export default function Footer() {
         <div className="relative h-64 md:h-80 overflow-hidden">
           <iframe
             src={`https://maps.google.com/maps?q=${HOTEL_INFO.coordinates.lat},${HOTEL_INFO.coordinates.lng}&z=15&output=embed`}
-            className="absolute inset-0 w-full h-full border-0 grayscale opacity-80"
+            className="absolute inset-0 w-full h-full border-0"
             loading="lazy"
             title="Casa do Capitão"
           />

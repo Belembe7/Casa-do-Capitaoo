@@ -37,23 +37,21 @@ export default function HotelIntro() {
           className="object-cover object-[center_32%] scale-[0.96] origin-center"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/75 to-black/80" />
       </div>
 
       <div className="relative z-10 section-padding py-12 md:py-16 text-center max-w-3xl mx-auto w-full px-6 md:px-10">
-        <div className="mx-auto max-w-2xl rounded-xl bg-black/45 px-5 py-6 md:px-8 md:py-7 backdrop-blur-sm border border-white/10">
-          <RevealLinesText
-            text={t.home.introSubtitle}
-            onFirstComplete={handleFirstReveal}
-            loop
-            stagger={1.75}
-            duration={2}
-            holdDuration={3.5}
-            fadeOutDuration={1.4}
-            className="space-y-4 md:space-y-5 min-h-[7rem] md:min-h-[6rem]"
-            lineClassName="font-body text-base md:text-lg text-white/95 font-light leading-relaxed [text-shadow:0_1px_10px_rgba(0,0,0,0.75)]"
-          />
-        </div>
+        <RevealLinesText
+          text={t.home.introSubtitle}
+          onFirstComplete={handleFirstReveal}
+          loop
+          stagger={1.75}
+          duration={2}
+          holdDuration={3.5}
+          fadeOutDuration={1.4}
+          className="mx-auto max-w-2xl space-y-4 md:space-y-5 min-h-[7rem] md:min-h-[6rem]"
+          lineClassName="font-body text-lg md:text-2xl text-white/95 font-light leading-relaxed [text-shadow:0_1px_10px_rgba(0,0,0,0.75)]"
+        />
 
         <Link
           href="/o-hotel"

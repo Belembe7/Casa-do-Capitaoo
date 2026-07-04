@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ui/ScrollReveal';
+import OHotelIntro from '@/components/pages/OHotelIntro';
 
 export const metadata: Metadata = {
   title: 'O Hotel',
@@ -58,20 +59,11 @@ export default function OHotelPage() {
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-black/35" />
-          <div className="absolute inset-x-0 bottom-0 section-padding pb-10 md:pb-12">
-            <h1 className="font-display text-4xl md:text-6xl text-white">O Hotel</h1>
-          </div>
         </div>
       </section>
 
       <section className="py-section section-padding text-center max-w-3xl mx-auto">
-        <ScrollReveal>
-          <p className="text-lg md:text-xl leading-relaxed text-text-light font-light">
-            Há mais de um século, este era o lugar de onde o Capitão do Porto observava
-            a Baía de Inhambane. Hoje, a piscina, o terraço e a vista de 270 graus
-            recebem viajantes de todo o mundo numa experiência de luxo contemporâneo.
-          </p>
-        </ScrollReveal>
+        <OHotelIntro />
       </section>
 
       {sections.map((section) => (

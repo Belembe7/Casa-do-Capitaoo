@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useI18n } from '@/lib/i18n/context';
 import { HOTEL_INFO } from '@/lib/utils';
 import LanguageSwitcher from '@/components/layout/LanguageSwitcher';
+import BrandLogo from '@/components/ui/BrandLogo';
 
 const navLinks = [
   { href: '/quartos', key: 'rooms' as const, external: false },
@@ -45,11 +46,7 @@ export default function Navbar() {
         <div className="section-padding">
           <div className="hidden lg:flex items-center justify-between h-20 gap-12">
             <Link href="/" className="flex-shrink-0">
-              <span
-                className={`font-display text-xl md:text-2xl tracking-wider transition-colors duration-300 ${logoColor}`}
-              >
-                Casa do Capitão
-              </span>
+              <BrandLogo className={logoColor} overMedia={!scrolled} />
             </Link>
 
             <nav className="flex items-center justify-end gap-x-5 xl:gap-x-7">
@@ -83,9 +80,7 @@ export default function Navbar() {
 
           <div className="lg:hidden flex items-center justify-between h-16">
             <Link href="/">
-              <span className={`font-display text-lg tracking-wider ${logoColor}`}>
-                Casa do Capitão
-              </span>
+              <BrandLogo className={logoColor} overMedia={!scrolled} size="sm" />
             </Link>
             <button
               onClick={() => setMobileOpen(true)}
@@ -108,7 +103,7 @@ export default function Navbar() {
             className="fixed inset-0 z-[60] bg-primary text-white flex flex-col"
           >
             <div className="flex items-center justify-between p-6">
-              <span className="font-display text-xl">Casa do Capitão</span>
+              <BrandLogo className="text-white" size="sm" />
               <button onClick={() => setMobileOpen(false)}>
                 <X size={24} />
               </button>

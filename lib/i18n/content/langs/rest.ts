@@ -1,5 +1,5 @@
 import type { SiteContent } from '../types';
-import { mergeContent } from './merge';
+import { mergeContent, type DeepPartial } from './merge';
 
 const r = (
   name: string, category: string, short: string, desc: string, view: string, amenities: string[]
@@ -9,7 +9,7 @@ function buildLang(
   amenities: SiteContent['amenities'],
   rooms: SiteContent['rooms'],
   offers: SiteContent['offers'],
-  pages: Partial<SiteContent['pages']>,
+  pages: DeepPartial<SiteContent['pages']>,
   labels: SiteContent['labels'],
   footer: SiteContent['footer'],
   popup: SiteContent['popup']

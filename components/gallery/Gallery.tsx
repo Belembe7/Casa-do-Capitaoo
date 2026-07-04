@@ -1,9 +1,8 @@
 'use client';
 
 import GalleryFilter from './GalleryFilter';
-import GalleryMasonry from './GalleryMasonry';
+import GalleryEditorial from './GalleryEditorial';
 import Lightbox from './Lightbox';
-import GalleryShowcase from './GalleryShowcase';
 import { useGallery } from '@/hooks/useGallery';
 
 export default function Gallery() {
@@ -12,11 +11,8 @@ export default function Gallery() {
     setFilter,
     filteredImages,
     lightboxIndex,
-    activeImage,
     openLightbox,
     closeLightbox,
-    showPrevious,
-    showNext,
   } = useGallery();
 
   return (
@@ -29,7 +25,7 @@ export default function Gallery() {
           <h1 className="font-display text-4xl font-bold tracking-tight text-primary md:text-5xl lg:text-6xl">
             Galeria
           </h1>
-          <p className="mt-4 max-w-2xl text-base text-text-light leading-relaxed">
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-text-light">
             Um olhar sobre a elegância, o conforto e a paisagem única da baía de Inhambane.
           </p>
         </header>
@@ -38,19 +34,10 @@ export default function Gallery() {
           <GalleryFilter activeFilter={filter} onFilterChange={setFilter} />
         </div>
 
-        <GalleryShowcase />
-
-        <GalleryMasonry images={filteredImages} onOpenLightbox={openLightbox} />
+        <GalleryEditorial images={filteredImages} onOpenLightbox={openLightbox} />
       </div>
 
-      <Lightbox
-        image={activeImage}
-        index={lightboxIndex ?? 0}
-        total={filteredImages.length}
-        onClose={closeLightbox}
-        onPrevious={showPrevious}
-        onNext={showNext}
-      />
+      <Lightbox images={filteredImages} index={lightboxIndex} onClose={closeLightbox} />
     </section>
   );
 }

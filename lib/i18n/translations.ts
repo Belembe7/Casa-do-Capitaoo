@@ -34,7 +34,7 @@ const pt: Translation = {
     introSubtitle:
       'Há mais de um século, este era o lugar de onde o Capitão do Porto observava a Baía de Inhambane e orientava as embarcações que chegavam à cidade. Hoje, esse mesmo cenário recebe viajantes de todo o mundo, preservando a sua herança marítima enquanto oferece uma experiência de hospitalidade contemporânea.',
     introCta: 'Sobre o Hotel',
-    roomsTitle: 'Quartos com vista para o Índico ou o abrigo do vento',
+    roomsTitle: 'Quartos com vista para o Índico',
     roomsCta: 'Todos os quartos',
     amenitiesTitle: 'Experiências que elevam a sua estadia',
     amenitiesSubtitle:

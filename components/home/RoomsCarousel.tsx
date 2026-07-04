@@ -60,16 +60,19 @@ export default function RoomsCarousel() {
 
       <div className="relative">
         <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex gap-6">
-            {carouselItems.map((item, i) =>
-              item.type === 'room' ? (
-                <RoomCard key={item.data.slug} room={item.data} index={i} priority={i < 5} />
-              ) : (
-                <div key={item.data.slug} className="flex-shrink-0 w-[280px] md:w-[320px]">
+          <div className="flex touch-pan-y">
+            {carouselItems.map((item, i) => (
+              <div
+                key={item.type === 'room' ? item.data.slug : item.data.slug}
+                className="flex-shrink-0 mr-6 md:mr-8 last:mr-0"
+              >
+                {item.type === 'room' ? (
+                  <RoomCard room={item.data} index={i} priority={i < 5} />
+                ) : (
                   <OfferCard offer={item.data} index={i} priority={i < 5} />
-                </div>
-              )
-            )}
+                )}
+              </div>
+            ))}
           </div>
         </div>
 

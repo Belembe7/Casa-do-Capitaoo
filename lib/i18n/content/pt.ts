@@ -108,11 +108,17 @@ export const PT_CONTENT: SiteContent = {
     },
     contacto: {
       title: 'Contacto',
+      formTitle: 'Fale Connosco',
+      formSubtitle:
+        'Estamos disponíveis para responder às suas questões, pedidos especiais ou reservas.',
+      responseTime: 'Resposta em menos de 24 horas.',
+      receptionHours: 'Recepção 24 Horas',
+      submitNote: 'Responderemos ao seu contacto no prazo máximo de 24 horas.',
       addressLabel: 'Morada',
       emailLabel: 'Email',
       phoneLabel: 'Telefone',
       whatsapp: 'WhatsApp',
-      sendMessage: 'Enviar mensagem',
+      sendMessage: 'Enviar Mensagem',
       name: 'Nome',
       email: 'Email',
       subject: 'Assunto',

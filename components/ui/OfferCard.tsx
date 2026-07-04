@@ -21,7 +21,7 @@ export default function OfferCard({ offer, index = 0, priority = false }: OfferC
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: index * 0.15 }}
-      className="group"
+      className="group w-[280px] md:w-[320px]"
     >
       <Link href={`/ofertas/${offer.slug}`} className="block">
         <div className="relative aspect-[4/3] overflow-hidden mb-4">

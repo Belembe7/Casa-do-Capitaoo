@@ -55,25 +55,6 @@ export const rooms: Room[] = [
     bookingUrl: '/reservar?quarto=vista-mar',
   },
   {
-    slug: 'quarto-jardim',
-    name: 'Quarto Jardim',
-    category: 'Standard',
-    description:
-      'Quarto acolhedor com vista para o nosso jardim tropical. Ambiente sereno e fresco, ideal para quem procura tranquilidade após um dia na praia de Tofo ou na baía de Inhambane.',
-    shortDescription: 'Vista para o jardim tropical do hotel.',
-    images: [
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80',
-      'https://images.unsplash.com/photo-1598928506311-c55ded91a2c3?w=800&q=80',
-    ],
-    size: 28,
-    view: 'Vista Jardim',
-    amenities: ['Wi-Fi', 'Ar condicionado', 'Cofre', 'Chaleira'],
-    capacity: 2,
-    pricePerNight: 8500,
-    available: true,
-    bookingUrl: '/reservar?quarto=jardim',
-  },
-  {
     slug: 'quarto-familiar',
     name: 'Quarto Familiar',
     category: 'Família',
