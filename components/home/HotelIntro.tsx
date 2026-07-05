@@ -40,7 +40,7 @@ export default function HotelIntro() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/75 to-black/80" />
       </div>
 
-      <div className="relative z-10 section-padding py-12 md:py-16 text-center max-w-3xl mx-auto w-full px-6 md:px-10">
+      <div className="relative z-10 section-padding py-12 md:py-16 text-center max-w-5xl mx-auto w-full px-6 md:px-12">
         <RevealLinesText
           text={t.home.introSubtitle}
           onFirstComplete={handleFirstReveal}
@@ -49,8 +49,8 @@ export default function HotelIntro() {
           duration={2}
           holdDuration={3.5}
           fadeOutDuration={1.4}
-          className="mx-auto max-w-2xl space-y-4 md:space-y-5 min-h-[7rem] md:min-h-[6rem]"
-          lineClassName="font-body text-lg md:text-2xl text-white/95 font-light leading-relaxed [text-shadow:0_1px_10px_rgba(0,0,0,0.75)]"
+          className="mx-auto max-w-4xl space-y-4 md:space-y-5 min-h-[8rem] md:min-h-[7rem]"
+          lineClassName="font-editorial text-xl md:text-2xl lg:text-3xl text-white font-medium leading-[1.5] tracking-[0.01em] [text-shadow:0_2px_20px_rgba(0,0,0,0.65)]"
         />
 
         <Link

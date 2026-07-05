@@ -6,6 +6,7 @@ import PageViewTracker from '@/components/analytics/PageViewTracker';
 import { HOTEL_INFO } from '@/lib/utils';
 import { satoshi } from '@/lib/fonts/satoshi';
 import { brandLogo } from '@/lib/fonts/logo';
+import { editorial } from '@/lib/fonts/editorial';
 
 export const metadata: Metadata = {
   title: {
@@ -48,7 +49,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="pt" className={`${satoshi.variable} ${brandLogo.variable}`}>
+    <html lang="pt" className={`${satoshi.variable} ${brandLogo.variable} ${editorial.variable}`}>
       <head>
         <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />

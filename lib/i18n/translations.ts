@@ -33,7 +33,7 @@ const pt: Translation = {
     introTitle: '',
     introSubtitle:
       'Há mais de um século, este era o lugar de onde o Capitão do Porto observava a Baía de Inhambane e orientava as embarcações que chegavam à cidade. Hoje, esse mesmo cenário recebe viajantes de todo o mundo, preservando a sua herança marítima enquanto oferece uma experiência de hospitalidade contemporânea.',
-    introCta: 'Sobre o Hotel',
+    introCta: 'Mais Sobre o Hotel',
     roomsTitle: 'Quartos com vista para o Índico',
     roomsCta: 'Todos os quartos',
     amenitiesTitle: 'Experiências que elevam a sua estadia',
@@ -114,7 +114,7 @@ const en: Translation = {
     introTitle: '',
     introSubtitle:
       'More than a century ago, this was where the Harbour Captain watched over Inhambane Bay and guided the vessels arriving in the city. Today, the same setting welcomes travellers from around the world, preserving its maritime heritage while offering a contemporary hospitality experience.',
-    introCta: 'About the Hotel',
+    introCta: 'More About the Hotel',
     roomsTitle: 'Rooms facing the Indian Ocean or sheltered from the wind',
     roomsCta: 'All rooms',
     amenitiesTitle: 'Experiences that elevate your stay',

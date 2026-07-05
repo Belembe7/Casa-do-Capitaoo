@@ -52,6 +52,12 @@ const config: Config = {
           '"Times New Roman"',
           'serif',
         ],
+        editorial: [
+          'var(--font-editorial)',
+          'Georgia',
+          '"Times New Roman"',
+          'serif',
+        ],
       },
       spacing: {
         section: 'var(--spacing-section)',
