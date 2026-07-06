@@ -13,9 +13,9 @@ export const PT_CONTENT: SiteContent = {
         'Espaço elegante e equipado para reuniões corporativas, apresentações e eventos de negócios com vista para a baía.',
     },
     gym: {
-      label: 'Balcão',
+      label: 'Bar',
       description:
-        'Balcão elegante com vista para a baía, ideal para cocktails, vinhos e momentos descontraídos num ambiente sofisticado.',
+        'Bar elegante com vista para a baía, ideal para cocktails, vinhos e momentos descontraídos num ambiente sofisticado.',
     },
   },
   rooms: {

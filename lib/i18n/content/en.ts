@@ -13,7 +13,7 @@ export const EN_CONTENT: SiteContent = {
         'An elegant, fully equipped space for corporate meetings, presentations and business events with bay views.',
     },
     gym: {
-      label: 'Bar Counter',
+      label: 'Bar',
       description:
         'An elegant bar with bay views, perfect for cocktails, wines and relaxed moments in a sophisticated setting.',
     },
