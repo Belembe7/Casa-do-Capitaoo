@@ -12,7 +12,6 @@ import { useSiteContent } from '@/lib/i18n/hooks';
 const conferenceRoomImages = [
   '/images/conference-room/01.png',
   '/images/conference-room/02.png',
-  '/images/conference-room/03.png',
 ] as const;
 
 const amenityImages: Record<(typeof amenityIds)[number], readonly string[] | null> = {
