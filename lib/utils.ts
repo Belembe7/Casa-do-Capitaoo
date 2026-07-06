@@ -44,14 +44,17 @@ export function slugify(text: string): string {
 export const HOTEL_INFO = {
   name: 'Casa do Capitão',
   tagline: 'Hotel Boutique em Inhambane',
-  address: 'Rua dos Navegadores, 12, Inhambane, Moçambique',
-  email: 'info@hotelcasadocapitao.co.mz',
+  address: 'Av. Maguiguane, Bairro Balane 1, Inhambane, Moçambique',
+  email: 'reservations@hotelcasadocapitao.co.mz',
   reservationsEmail: 'reservations@hotelcasadocapitao.co.mz',
+  landline: '+258 29321408/9',
+  landlineTel: '+25829321408',
   phone: '+258 840262302',
-  fax: '+258 29321413',
+  phoneTel: '+258840262302',
   whatsapp: '258840262302',
   coordinates: { lat: -23.865, lng: 35.383 },
-  mapsUrl: 'https://maps.google.com/?q=Inhambane+Mozambique',
+  mapsUrl:
+    'https://maps.google.com/?q=Av.+Maguiguane,+Bairro+Balane+1,+Inhambane,+Mo%C3%A7ambique',
   bookingEngineUrl: 'https://booking.casadocapitao.co.mz',
   social: {
     facebook: 'https://facebook.com/casadocapitao',

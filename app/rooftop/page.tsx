@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { HOTEL_INFO } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'Rooftop Bar',
@@ -51,8 +52,8 @@ export default function RooftopPage() {
           </div>
           <div>
             <h3 className="text-xs uppercase tracking-widest text-secondary mb-2">Reservas</h3>
-            <p className="text-sm">+258 84 123 4567</p>
-            <p className="text-sm text-text-light">info@casadocapitao.co.mz</p>
+            <p className="text-sm">{HOTEL_INFO.phone}</p>
+            <p className="text-sm text-text-light">{HOTEL_INFO.email}</p>
           </div>
         </div>
       </section>

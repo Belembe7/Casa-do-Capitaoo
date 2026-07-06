@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -9,10 +9,52 @@ import ScrollReveal from '@/components/ui/ScrollReveal';
 import { useI18n } from '@/lib/i18n/context';
 import { useSiteContent } from '@/lib/i18n/hooks';
 
-const amenityImages: Record<(typeof amenityIds)[number], string | null> = {
-  lobby: '/images/amenity-sala-conferencia.png',
-  gym: null,
+const conferenceRoomImages = [
+  '/images/conference-room/01.png',
+  '/images/conference-room/02.png',
+  '/images/conference-room/03.png',
+] as const;
+
+const amenityImages: Record<(typeof amenityIds)[number], readonly string[] | null> = {
+  lobby: conferenceRoomImages,
+  gym: ['/images/amenity-balcao.png'],
 };
+
+const SLIDESHOW_INTERVAL_MS = 5000;
+
+function ImageSlideshow({ images, alt }: { images: readonly string[]; alt: string }) {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex((prev) => (prev + 1) % images.length);
+    }, SLIDESHOW_INTERVAL_MS);
+    return () => clearInterval(timer);
+  }, [images.length]);
+
+  return (
+    <>
+      {images.map((src, i) => (
+        <motion.div
+          key={src}
+          animate={{ opacity: i === index ? 1 : 0 }}
+          transition={{ duration: 0.8, ease: 'easeInOut' }}
+          className="absolute inset-0 bg-[#eceae6]"
+          aria-hidden={i !== index}
+        >
+          <Image
+            src={src}
+            alt={i === index ? alt : ''}
+            fill
+            priority={i === 0}
+            className="object-contain"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+          />
+        </motion.div>
+      ))}
+    </>
+  );
+}
 
 const amenityIds = ['lobby', 'gym'] as const;
 
@@ -93,16 +135,20 @@ export default function AmenitiesTabs() {
               >
                 {activeAmenity.image ? (
                   <>
-                    <Image
-                      src={activeAmenity.image}
-                      alt={activeAmenity.label}
-                      fill
-                      priority={activeAmenity.id === amenities[0].id}
-                      className="object-cover"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                    />
+                    {activeAmenity.image.length > 1 ? (
+                      <ImageSlideshow images={activeAmenity.image} alt={activeAmenity.label} />
+                    ) : (
+                      <Image
+                        src={activeAmenity.image[0]}
+                        alt={activeAmenity.label}
+                        fill
+                        priority={activeAmenity.id === amenities[0].id}
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                      />
+                    )}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                    <p className="absolute bottom-6 left-6 right-6 text-white text-sm">
+                    <p className="absolute bottom-6 left-6 right-6 z-10 text-white text-sm">
                       {activeAmenity.description}
                     </p>
                   </>

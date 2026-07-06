@@ -10,9 +10,14 @@ import { useI18n } from '@/lib/i18n/context';
 import { HOTEL_INFO } from '@/lib/utils';
 import {
   staggerContainerVariants,
-  staggerInViewOptions,
   staggerItemVariants,
 } from '@/lib/animations/staggeredEntry';
+
+const instagramInViewOptions = {
+  once: true as const,
+  margin: '0px 0px -80px 0px' as const,
+  amount: 0 as const,
+};
 
 const galleryImages = [
   {
@@ -23,35 +28,47 @@ const galleryImages = [
     span: 'full' as const,
   },
   {
-    src: '/images/instagram/03-seafood.png',
-    width: 1024,
-    height: 681,
-    alt: 'Jantar de marisco ao pôr do sol',
+    src: '/images/instagram/vista-01.png',
+    width: 768,
+    height: 1024,
+    alt: 'Pôr do sol na piscina com palmeiras',
   },
   {
-    src: '/images/instagram/04-restaurant.png',
-    width: 1024,
-    height: 678,
-    alt: 'Restaurante com vista para o mar',
+    src: '/images/instagram/vista-02.png',
+    width: 768,
+    height: 1024,
+    alt: 'Piscina do hotel com vista para o mar',
   },
   {
-    src: '/images/instagram/05-pool-day.png',
-    width: 1024,
-    height: 667,
-    alt: 'Piscina do hotel',
+    src: '/images/instagram/vista-03.png',
+    width: 768,
+    height: 1024,
+    alt: 'Pôr do sol visto da varanda',
   },
   {
-    src: '/images/instagram/06-pool-aerial.png',
+    src: '/images/instagram/vista-04.png',
     width: 1024,
     height: 768,
-    alt: 'Vista da piscina e baía',
+    alt: 'Piscina iluminada ao entardecer',
+  },
+  {
+    src: '/images/instagram/vista-05.png',
+    width: 1024,
+    height: 990,
+    alt: 'Piscina e área exterior do hotel',
+  },
+  {
+    src: '/images/instagram/vista-06.png',
+    width: 768,
+    height: 1024,
+    alt: 'Vista panorâmica da piscina e baía',
   },
 ];
 
 export default function InstagramFeed() {
   const { t } = useI18n();
   const gridRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(gridRef, staggerInViewOptions);
+  const isInView = useInView(gridRef, instagramInViewOptions);
 
   return (
     <section className="py-section section-padding">
@@ -64,9 +81,10 @@ export default function InstagramFeed() {
         </p>
       </ScrollReveal>
 
+      <div ref={gridRef} className="h-px w-full" aria-hidden />
+
       <motion.div
-        ref={gridRef}
-        className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4"
+        className="grid grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3 lg:gap-4"
         variants={staggerContainerVariants}
         initial="hidden"
         animate={isInView ? 'visible' : 'hidden'}
@@ -75,7 +93,7 @@ export default function InstagramFeed() {
           <motion.div
             key={img.src}
             variants={staggerItemVariants(i)}
-            className={img.span === 'full' ? 'md:col-span-2' : undefined}
+            className={img.span === 'full' ? 'col-span-2 lg:col-span-3' : undefined}
           >
             <Link
               href={HOTEL_INFO.social.instagram}
@@ -88,13 +106,12 @@ export default function InstagramFeed() {
                 alt={img.alt}
                 width={img.width}
                 height={img.height}
-                priority={i < 2}
-                fetchPriority={i < 2 ? 'high' : undefined}
+                priority={i < 3}
                 className="w-full h-auto block"
                 sizes={
                   img.span === 'full'
                     ? '100vw'
-                    : '(max-width: 768px) 100vw, 50vw'
+                    : '(max-width: 1024px) 50vw, 33vw'
                 }
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-base flex items-center justify-center">

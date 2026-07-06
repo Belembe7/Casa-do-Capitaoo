@@ -29,9 +29,13 @@ function EditorialCard({ image, index, onOpen }: EditorialCardProps) {
   const [loaded, setLoaded] = useState(false);
   const [error, setError] = useState(false);
   const staggerClass = index % 2 === 0 ? styles.editorialCardEven : styles.editorialCardOdd;
+  const floatDelay = `${index * 0.35}s`;
 
   return (
-    <article className={`${styles.editorialCard} ${staggerClass}`}>
+    <article
+      className={`${styles.editorialCard} ${staggerClass}`}
+      style={{ animationDelay: floatDelay }}
+    >
       <button
         type="button"
         onClick={() => onOpen(index)}

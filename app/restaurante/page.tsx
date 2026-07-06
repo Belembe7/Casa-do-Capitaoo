@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ui/ScrollReveal';
+import { HOTEL_INFO } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'Restaurante',
@@ -76,7 +77,8 @@ export default function RestaurantePage() {
             </div>
             <div>
               <h3 className="text-xs uppercase tracking-widest text-secondary mb-2">Reservas</h3>
-              <p className="text-sm">+258 84 123 4567</p>
+              <p className="text-sm">{HOTEL_INFO.landline}</p>
+              <p className="text-sm text-text-light">{HOTEL_INFO.email}</p>
             </div>
           </div>
         </ScrollReveal>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { HOTEL_INFO } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'Aviso Legal',
@@ -14,7 +15,7 @@ export default function AvisoLegalPage() {
         da Casa do Capitão e não podem ser reproduzidos sem autorização prévia.
       </p>
       <p className="text-text-light leading-relaxed">
-        Para questões legais, contacte-nos em info@casadocapitao.co.mz.
+        Para questões legais, contacte-nos em {HOTEL_INFO.email}.
       </p>
     </section>
   );

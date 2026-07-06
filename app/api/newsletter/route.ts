@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { HOTEL_INFO } from '@/lib/utils';
 import { readJsonFile, writeJsonFile, type NewsletterSubscriber } from '@/lib/db';
 
 export async function POST(request: Request) {
@@ -38,7 +39,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         error: 'Erro ao subscrever.',
-        hint: 'Tente novamente ou contacte info@casadocapitao.co.mz para assistência.',
+        hint: `Tente novamente ou contacte ${HOTEL_INFO.email} para assistência.`,
       },
       { status: 500 }
     );

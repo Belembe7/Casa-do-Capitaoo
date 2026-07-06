@@ -87,7 +87,7 @@ export default function ContactoPage() {
                 <Mail size={16} strokeWidth={1.5} className="text-[#B8955A]" aria-hidden />
                 {p.emailLabel}
               </a>
-              <a href={`tel:${HOTEL_INFO.phone}`} className="contact-channel">
+              <a href={`tel:${HOTEL_INFO.phoneTel}`} className="contact-channel">
                 <Phone size={16} strokeWidth={1.5} className="text-[#B8955A]" aria-hidden />
                 {p.phoneLabel}
               </a>
@@ -112,17 +112,26 @@ export default function ContactoPage() {
               </div>
               <div className="contact-info-item">
                 <Phone size={18} strokeWidth={1.5} className="mt-0.5 shrink-0 text-[#B8955A]" aria-hidden />
-                <a href={`tel:${HOTEL_INFO.phone}`} className="hover:text-[#B8955A] transition-colors duration-base">
-                  {HOTEL_INFO.phone}
+                <a href={`tel:${HOTEL_INFO.landlineTel}`} className="hover:text-[#B8955A] transition-colors duration-base">
+                  TEL. {HOTEL_INFO.landline}
+                </a>
+              </div>
+              <div className="contact-info-item">
+                <Phone size={18} strokeWidth={1.5} className="mt-0.5 shrink-0 text-[#B8955A]" aria-hidden />
+                <a
+                  href={`tel:${HOTEL_INFO.phoneTel}`}
+                  className="hover:text-[#B8955A] transition-colors duration-base"
+                >
+                  CEL. {HOTEL_INFO.phone}
                 </a>
               </div>
               <div className="contact-info-item">
                 <Mail size={18} strokeWidth={1.5} className="mt-0.5 shrink-0 text-[#B8955A]" aria-hidden />
                 <a
-                  href={`mailto:${HOTEL_INFO.reservationsEmail}`}
+                  href={`mailto:${HOTEL_INFO.email}`}
                   className="hover:text-[#B8955A] transition-colors duration-base"
                 >
-                  {HOTEL_INFO.reservationsEmail}
+                  {HOTEL_INFO.email}
                 </a>
               </div>
               <div className="contact-info-item">

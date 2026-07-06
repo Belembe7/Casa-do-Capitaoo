@@ -1,4 +1,5 @@
 import toast from 'react-hot-toast';
+import { HOTEL_INFO } from '@/lib/utils';
 
 interface FeedbackOptions {
   hint?: string;
@@ -104,7 +105,7 @@ export async function handleApiResponse<T = Record<string, unknown>>(
         ? 'Confirme se os dados introduzidos estão correctos.'
         : res.status >= 500
           ? 'O problema é temporário. Aguarde alguns minutos ou contacte-nos por telefone ou WhatsApp.'
-          : 'Se o problema persistir, contacte info@casadocapitao.co.mz ou use o WhatsApp.');
+          : `Se o problema persistir, contacte ${HOTEL_INFO.email} ou use o WhatsApp.`);
 
   notifyError(title, { hint });
   return { ok: false, data };

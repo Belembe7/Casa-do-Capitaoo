@@ -42,7 +42,7 @@ export default function RootLayout({
       addressLocality: 'Inhambane',
       addressCountry: 'MZ',
     },
-    telephone: HOTEL_INFO.phone,
+    telephone: [HOTEL_INFO.landline, HOTEL_INFO.phone],
     email: HOTEL_INFO.email,
     url: 'https://casadocapitao.co.mz',
     starRating: { '@type': 'Rating', ratingValue: '4' },

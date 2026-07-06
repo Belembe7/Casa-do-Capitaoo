@@ -75,8 +75,11 @@ export default function Footer() {
             <a href={`mailto:${HOTEL_INFO.email}`} className="block text-white/70 hover:text-secondary transition-colors">
               {HOTEL_INFO.email}
             </a>
-            <a href={`tel:${HOTEL_INFO.phone}`} className="block text-white/70 hover:text-secondary transition-colors">
-              T. {HOTEL_INFO.phone}
+            <a href={`tel:${HOTEL_INFO.landlineTel}`} className="block text-white/70 hover:text-secondary transition-colors">
+              TEL. {HOTEL_INFO.landline}
+            </a>
+            <a href={`tel:${HOTEL_INFO.phoneTel}`} className="block text-white/70 hover:text-secondary transition-colors">
+              CEL. {HOTEL_INFO.phone}
             </a>
           </div>
           <a
